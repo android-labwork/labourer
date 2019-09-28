@@ -30,4 +30,10 @@
     <string name="status_be_accepted">Diterima</string>
     <string name="status_done">Selesai</string>
     <string name="status_canceled">Dibatalkan</string>
+
+    <!-- DUMMY STRING -->
+    <string name="title_dummy">Lorem Ipsum 1234</string>
+    <string name="location_dummy">Indonesia</string>
+    <string name="price_dummy">Rp.30.000 - Rp.200.000</string>
+    <string name="profile_description_dummy">Saya adalah tukang yang cukup berpengalaman dalam mengerjakan pekerjaan seperti mengecat dan renovasi sederhana untuk rumah anda....</string>
 </resources>

@@ -6,10 +6,10 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.aitekteam.developer.labourer.Fragment.FindJobFragment;
-import com.aitekteam.developer.labourer.Fragment.JobFragment;
-import com.aitekteam.developer.labourer.Fragment.NotificationFragment;
-import com.aitekteam.developer.labourer.Fragment.ProfileFragment;
+import com.aitekteam.developer.labourer.Fragments.FindJobFragment;
+import com.aitekteam.developer.labourer.Fragments.JobFragment;
+import com.aitekteam.developer.labourer.Fragments.NotificationFragment;
+import com.aitekteam.developer.labourer.Fragments.ProfileFragment;
 import com.aitekteam.developer.labourer.Handlers.MainMenuHandler;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements MainMenuHandler.N
         this.menuHandler = MainMenuHandler.getInstance(this);
 
         this.navigation = this.findViewById(R.id.navigation);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main_frame, JobFragment.getInstance()).commit();
         this.navigation.setOnNavigationItemSelectedListener(this.menuHandler);
     }
 
@@ -34,16 +36,16 @@ public class MainActivity extends AppCompatActivity implements MainMenuHandler.N
         Fragment fragment;
         switch (id) {
             case R.id.action_job:
-                fragment = new JobFragment();
+                fragment = JobFragment.getInstance();
                 break;
             case R.id.action_find_job:
-                fragment = new FindJobFragment();
+                fragment = FindJobFragment.getInstance();
                 break;
             case R.id.action_notification:
-                fragment = new NotificationFragment();
+                fragment = NotificationFragment.getInstance();
                 break;
             default:
-                fragment = new ProfileFragment();
+                fragment = ProfileFragment.getInstance();
                 break;
         }
         getSupportFragmentManager().beginTransaction()
