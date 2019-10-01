@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 
+import com.aitekteam.developer.labourer.Fragments.EditProfileFragment;
 import com.aitekteam.developer.labourer.Fragments.JobDetailFragment;
 import com.aitekteam.developer.labourer.Fragments.NotFound404Fragment;
 
@@ -38,6 +39,9 @@ public class DetailActivity extends AppCompatActivity {
             switch (fragment) {
                 case R.string.job_detail_fragment:
                     detail_fragment = JobDetailFragment.getInstance();
+                    break;
+                case R.string.edit_profile_fragment:
+                    detail_fragment = EditProfileFragment.getInstance();
                     break;
                 default:
                     detail_fragment = NotFound404Fragment.getInstance();

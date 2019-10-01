@@ -13,6 +13,7 @@
         android:src="@drawable/user_100"/>
 
     <ImageView
+        android:id="@+id/page_setting_button"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_alignEnd="@id/page_photo"

@@ -40,10 +40,15 @@
     <!-- BUTTON STRING -->
     <string name="yes_button">Ya</string>
     <string name="no_button">Tidak</string>
+    <string name="job_application_button">Lamar Pekerjaan</string>
+    <string name="save_button">Simpan</string>
+    <string name="change_face_button">Ganti Foto</string>
     
     <!-- APPBAR STRING -->
     <string name="job_detail_app">Detail Pekerjaan</string>
-    
+    <string name="edit_profile_app">Pengaturan Profil</string>
+
     <!-- FRAGMENT LABEL -->
     <string name="job_detail_fragment">detail_pekerjaan</string>
+    <string name="edit_profile_fragment">pengaturan_profile</string>
 </resources>

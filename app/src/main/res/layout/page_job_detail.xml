@@ -1,31 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/page_job_detail_title"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/page_job_detail_job_application">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/page_job_detail_slider"
-        android:layout_width="match_parent"
-        android:layout_height="256dp"
-        android:layout_below="@id/page_job_detail_title"/>
-    
-    <LinearLayout
-        android:id="@+id/page_job_detail_slider_dots"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/page_job_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:text="@string/field_title"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/page_job_detail_slider"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_below="@id/page_job_detail_title"/>
+
+            <LinearLayout
+                android:id="@+id/page_job_detail_slider_dots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/page_job_detail_slider"
+                android:layout_alignEnd="@id/page_job_detail_slider"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:paddingBottom="16dp"/>
+
+            <ImageView
+                android:id="@+id/page_job_detail_category"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/page_job_detail_slider"
+                android:layout_marginTop="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="24dp"
+                android:contentDescription="@string/title_dummy"
+                android:src="@drawable/decoration_skill_50"/>
+
+            <ImageView
+                android:id="@+id/label_marker"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_marker_15"
+                android:layout_toEndOf="@id/page_job_detail_category"
+                android:layout_below="@id/page_job_detail_slider"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/page_job_detail_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_below="@id/page_job_detail_slider"
+                android:layout_toEndOf="@id/label_marker"
+                android:layout_marginTop="32dp"
+                android:text="@string/location_dummy"/>
+
+            <TextView
+                android:id="@+id/page_job_detail_prices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:layout_below="@id/label_marker"
+                android:layout_alignStart="@id/label_marker"
+                android:layout_marginTop="8dp"
+                android:text="@string/price_dummy"/>
+
+            <TextView
+                android:id="@+id/page_job_detail_duration_of_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="24dp"
+                android:layout_alignTop="@id/label_marker"
+                android:layout_toEndOf="@id/page_job_detail_prices"
+                android:layout_marginStart="8dp"
+                android:text="@string/field_duration_of_work"/>
+
+            <TextView
+                android:id="@+id/label_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/page_job_detail_category"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/job_detail_app"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/page_job_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_description"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/profile_description_dummy"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/page_job_detail_description"
+                android:layout_marginTop="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/field_benefit"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <ListView
+                        android:id="@+id/page_job_detail_list_of_benefit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/field_count_of_worker"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/page_job_detail_count_of_worker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/field_count_of_worker"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/page_job_detail_job_application"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/page_job_detail_slider"
-        android:layout_alignEnd="@id/page_job_detail_slider"
-        android:orientation="horizontal"
-        android:gravity="end"
-        android:paddingBottom="16dp"/>
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:text="@string/job_application_button"/>
 
 </RelativeLayout>
