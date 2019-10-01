@@ -24,7 +24,7 @@
     <string name="field_benefit">Keuntungan</string>
     <string name="field_count_of_worker">Jumlah Pekerja</string>
     <string name="field_duration_of_work">Lama Pekerjaan</string>
-    
+
     <!-- STATUS STRING -->
     <string name="status_in_proccess">Dalam Pengerjaan</string>
     <string name="status_be_accepted">Diterima</string>
@@ -36,4 +36,14 @@
     <string name="location_dummy">Indonesia</string>
     <string name="price_dummy">Rp.30.000 - Rp.200.000</string>
     <string name="profile_description_dummy">Saya adalah tukang yang cukup berpengalaman dalam mengerjakan pekerjaan seperti mengecat dan renovasi sederhana untuk rumah anda....</string>
+
+    <!-- BUTTON STRING -->
+    <string name="yes_button">Ya</string>
+    <string name="no_button">Tidak</string>
+    
+    <!-- APPBAR STRING -->
+    <string name="job_detail_app">Detail Pekerjaan</string>
+    
+    <!-- FRAGMENT LABEL -->
+    <string name="job_detail_fragment">detail_pekerjaan</string>
 </resources>

@@ -33,7 +33,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         this.view = inflater.inflate(R.layout.component_page, container, false);
         PagesHandler pagesHandler = new PagesHandler(this.view);
-        pagesHandler.showPage(R.id.page_profile);
+        pagesHandler.showPage(R.id.page_profile_worker);
         this.page_profile_content = this.view.findViewById(R.id.page_profile_content);
         this.page_profile_content.setHasFixedSize(true);
         this.page_profile_content.setLayoutManager(new GridLayoutManager(this.getContext(), 2));

@@ -22,7 +22,8 @@ public class PagesHandler {
     }
 
     private void listPage() {
-        this.items.add(R.id.page_profile);
+        this.items.add(R.id.page_profile_worker);
+        this.items.add(R.id.page_job_detail);
     }
 
     private void setPages() {

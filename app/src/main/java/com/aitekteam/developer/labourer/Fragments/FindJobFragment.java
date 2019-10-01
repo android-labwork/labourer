@@ -1,5 +1,6 @@
 package com.aitekteam.developer.labourer.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aitekteam.developer.labourer.Adapters.FindJobAdapter;
+import com.aitekteam.developer.labourer.DetailActivity;
 import com.aitekteam.developer.labourer.Models.JobModel;
 import com.aitekteam.developer.labourer.R;
 
@@ -41,7 +43,11 @@ public class FindJobFragment extends Fragment {
         this.adapter = new FindJobAdapter(this.data_set, new FindJobAdapter.JobSelectedHandler() {
             @Override
             public void onSelectedItem(JobModel item, int position) {
-
+                Intent intent = new Intent(getContext(), DetailActivity.class);
+                intent.putExtra("data_object", item);
+                intent.putExtra("title", getResources().getString(R.string.job_detail_app));
+                intent.putExtra("fragment", R.string.job_detail_fragment);
+                startActivity(intent);
             }
         });
         this.main_list.setAdapter(this.adapter);

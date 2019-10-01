@@ -30,7 +30,7 @@ public class JobFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
 
         this.view = inflater.inflate(R.layout.component_list, container, false);
 
@@ -42,13 +42,11 @@ public class JobFragment extends Fragment {
         this.adapter = new JobAdapter(this.data_set, new JobAdapter.JobSelectedHandler() {
             @Override
             public void onSelectedItem(JobModel item, int position) {
-
             }
         });
         this.main_list.setAdapter(this.adapter);
 
         return view;
-
     }
 
     private void insertDataSet() {

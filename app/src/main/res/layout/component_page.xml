@@ -3,6 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include android:id="@+id/page_profile" layout="@layout/page_profile_worker" />
+    <include layout="@layout/page_list" />
 
 </ScrollView>
