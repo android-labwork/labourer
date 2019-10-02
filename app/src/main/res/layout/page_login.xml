@@ -102,6 +102,7 @@
         android:text="@string/label_dont_have_account"/>
 
     <TextView
+        android:id="@+id/page_login_registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/page_login_password"
