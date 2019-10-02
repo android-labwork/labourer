@@ -8,9 +8,19 @@
     <string name="label_profile">Akun</string>
     <string name="label_find_worker">Cari Pekerja</string>
 
+    <!-- LABEL STRING -->
+    <string name="label_last_exp">Exp Terakhir didapatkan</string>
+    <string name="label_want_to_be">Saya Ingin</string>
+    <string name="label_want_to_job">Bekerja</string>
+    <string name="label_want_to_find_job">Mencari Pekerja</string>
+    <string name="label_dont_have_account">Belum punya akun?</string>
+    <string name="label_already_have_account">Sudah punya akun?</string>
+    <string name="label_register_now">Daftar sekarang!</string>
+    <string name="label_login_now">Login sekarang!</string>
+
     <!-- DESCRIPTION STRING -->
-    <string name="desc_registration">Daftarkan diri anda dan menjadi bagian dari Labourer</string>
-    <string name="desc_login">Masukkan username dan password untuk masuk ke aplikasi</string>
+    <string name="desc_registration">Daftarkan diri anda dan menjadi bagian \ndari Labourer</string>
+    <string name="desc_login">Masukkan username dan password \nuntuk masuk ke aplikasi</string>
 
     <!-- FIELD STRING -->
     <string name="field_email">E-Mail</string>
@@ -24,6 +34,7 @@
     <string name="field_benefit">Keuntungan</string>
     <string name="field_count_of_worker">Jumlah Pekerja</string>
     <string name="field_duration_of_work">Lama Pekerjaan</string>
+    <string name="field_address">Alamat</string>
 
     <!-- STATUS STRING -->
     <string name="status_in_proccess">Dalam Pengerjaan</string>
@@ -36,6 +47,10 @@
     <string name="location_dummy">Indonesia</string>
     <string name="price_dummy">Rp.30.000 - Rp.200.000</string>
     <string name="profile_description_dummy">Saya adalah tukang yang cukup berpengalaman dalam mengerjakan pekerjaan seperti mengecat dan renovasi sederhana untuk rumah anda....</string>
+    <string name="email_dummy">johndoe@contoh.com</string>
+    <string name="password_dummy">johndoe123</string>
+    <string name="full_name_dummy">John Doe</string>
+    <string name="nik_dummy">7392749129xxxxxx</string>
 
     <!-- BUTTON STRING -->
     <string name="yes_button">Ya</string>
@@ -43,7 +58,9 @@
     <string name="job_application_button">Lamar Pekerjaan</string>
     <string name="save_button">Simpan</string>
     <string name="change_face_button">Ganti Foto</string>
-    
+    <string name="login_button">Masuk</string>
+    <string name="registration_button">Daftar</string>
+
     <!-- APPBAR STRING -->
     <string name="job_detail_app">Detail Pekerjaan</string>
     <string name="edit_profile_app">Pengaturan Profil</string>

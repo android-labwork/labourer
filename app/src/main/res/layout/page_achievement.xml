@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/page_achievement_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/title_dummy"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/label_achievement"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/page_achievement_title"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_achievement_40"/>
+
+    <TextView
+        android:id="@+id/page_achievement_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_achievement"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:text="@string/title_dummy"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/label_last_achievement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@id/page_achievement_max"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/label_last_exp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/page_achievement_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_below="@id/label_last_achievement"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

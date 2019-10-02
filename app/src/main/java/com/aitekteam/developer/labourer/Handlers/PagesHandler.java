@@ -22,6 +22,10 @@ public class PagesHandler {
     }
 
     private void listPage() {
+        this.items.add(R.id.page_splash_screen);
+        this.items.add(R.id.page_login);
+        this.items.add(R.id.page_registration);
+
         this.items.add(R.id.page_profile_worker);
         this.items.add(R.id.page_edit_profile);
         this.items.add(R.id.page_job_detail);
