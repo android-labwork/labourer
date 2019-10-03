@@ -7,6 +7,9 @@ public class AchievementModel implements Serializable {
     private int point, status, type;
     private double location_lat, location_lon;
 
+    public AchievementModel() {
+    }
+
     public AchievementModel(String title, String location, int point, int status, int type, double location_lat, double location_lon) {
         this.title = title;
         this.location = location;

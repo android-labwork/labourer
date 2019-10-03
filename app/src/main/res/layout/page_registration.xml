@@ -80,7 +80,7 @@
                 android:layout_marginTop="16dp"/>
 
             <EditText
-                android:id="@+id/page_login_full_name"
+                android:id="@+id/page_registration_full_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/full_name_dummy"
@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/field_nik"
-                android:layout_below="@id/page_login_full_name"
+                android:layout_below="@id/page_registration_full_name"
                 android:textSize="16sp"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
@@ -107,7 +107,7 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/page_login_nik"
+                android:id="@+id/page_registration_nik"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/nik_dummy"
@@ -126,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/field_email"
-                android:layout_below="@id/page_login_nik"
+                android:layout_below="@id/page_registration_nik"
                 android:textSize="16sp"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
@@ -134,11 +134,11 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/page_login_email"
+                android:id="@+id/page_registration_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email_dummy"
-                android:inputType="textEmailAddress"
+                android:inputType="textWebEmailAddress"
                 android:maxLines="1"
                 android:textColor="@color/colorWhite"
                 app:backgroundTint="@color/colorWhite"
@@ -153,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/field_password"
-                android:layout_below="@id/page_login_email"
+                android:layout_below="@id/page_registration_email"
                 android:textSize="16sp"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
@@ -161,11 +161,11 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/page_login_password"
+                android:id="@+id/page_registration_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password_dummy"
-                android:inputType="textPassword"
+                android:inputType="textWebPassword"
                 android:maxLines="1"
                 android:textColor="@color/colorWhite"
                 android:layout_marginBottom="8dp"
@@ -180,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorAccent"
-                android:layout_below="@id/page_login_password"
+                android:layout_below="@id/page_registration_password"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:layout_marginTop="32dp"

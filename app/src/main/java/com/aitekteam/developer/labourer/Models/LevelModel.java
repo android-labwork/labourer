@@ -7,6 +7,9 @@ public class LevelModel implements Serializable {
     private int point, status;
     private double location_lat, location_lon;
 
+    public LevelModel() {
+    }
+
     public LevelModel(String title, String location, int point, int status, double location_lat, double location_lon) {
         this.title = title;
         this.location = location;

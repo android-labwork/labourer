@@ -56,6 +56,11 @@
     <string name="password_dummy">johndoe123</string>
     <string name="full_name_dummy">John Doe</string>
     <string name="nik_dummy">7392749129xxxxxx</string>
+    <string name="min_price_dummy">Minimum</string>
+    <string name="max_price_dummy">Maximum</string>
+    <string name="benefit_dummy">Contoh : Dapat Makan</string>
+    <string name="duration_of_work_dummy">12 Hari</string>
+    <string name="count_of_work_dummy">1 Orang</string>
 
     <!-- BUTTON STRING -->
     <string name="yes_button">Ya</string>
@@ -84,4 +89,7 @@
     <string name="skills_fragment">keahlian</string>
     <string name="review_fragment">ulasan</string>
     <string name="create_job_fragment">buat_pekerjaan</string>
+    
+    <!-- SHAREPREF STRING -->
+    <string name="uid">user_id</string>
 </resources>

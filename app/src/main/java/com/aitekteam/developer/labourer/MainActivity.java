@@ -3,7 +3,10 @@ package com.aitekteam.developer.labourer;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.aitekteam.developer.labourer.Fragments.FindJobFragment;

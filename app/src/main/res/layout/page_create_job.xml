@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -51,12 +52,15 @@
                     android:text="@string/field_title"/>
 
                 <EditText
+                    android:id="@+id/page_create_job_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:hint="@string/field_title"
                     android:inputType="text"
                     android:maxLines="1"
+                    android:textColorHint="@color/colorBlack"
+                    app:backgroundTint="@color/colorBlack"
                     android:textColor="@color/colorPrimary"
                     android:layout_marginBottom="8dp"/>
 
@@ -68,6 +72,7 @@
                     android:text="@string/field_description"/>
 
                 <EditText
+                    android:id="@+id/page_create_job_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -75,6 +80,8 @@
                     android:inputType="textMultiLine"
                     android:minLines="5"
                     android:gravity="start"
+                    android:textColorHint="@color/colorBlack"
+                    app:backgroundTint="@color/colorBlack"
                     android:textColor="@color/colorPrimary"
                     android:layout_marginBottom="8dp"/>
 
@@ -98,9 +105,10 @@
                             android:textSize="16sp"/>
 
                         <EditText
+                            android:id="@+id/page_create_job_min_price"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/field_price"
+                            android:hint="@string/min_price_dummy"
                             android:inputType="number"
                             android:maxLines="1"
                             android:gravity="start"
@@ -108,11 +116,14 @@
                             android:layout_marginBottom="8dp"/>
 
                         <EditText
+                            android:id="@+id/page_create_job_max_price"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/field_price"
+                            android:hint="@string/max_price_dummy"
                             android:inputType="number"
                             android:maxLines="1"
+                            android:textColorHint="@color/colorBlack"
+                            app:backgroundTint="@color/colorBlack"
                             android:gravity="start"
                             android:textColor="@color/colorPrimary"/>
 
@@ -126,12 +137,15 @@
                             android:layout_marginTop="16dp"/>
 
                         <EditText
+                            android:id="@+id/page_create_job_benefit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/field_price"
+                            android:hint="@string/benefit_dummy"
                             android:inputType="textMultiLine"
                             android:maxLines="2"
                             android:gravity="start"
+                            android:textColorHint="@color/colorBlack"
+                            app:backgroundTint="@color/colorBlack"
                             android:textColor="@color/colorPrimary"/>
 
                     </LinearLayout>
@@ -151,13 +165,16 @@
                             android:textSize="16sp"/>
 
                         <EditText
+                            android:id="@+id/page_create_job_duration_of_work"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/field_price"
+                            android:hint="@string/duration_of_work_dummy"
                             android:inputType="number"
                             android:maxLines="1"
                             android:gravity="start"
                             android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorBlack"
+                            app:backgroundTint="@color/colorBlack"
                             android:layout_marginBottom="8dp"/>
 
                         <TextView
@@ -169,13 +186,16 @@
                             android:textSize="16sp"/>
 
                         <EditText
+                            android:id="@+id/page_create_job_count_of_work"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/field_price"
+                            android:hint="@string/count_of_work_dummy"
                             android:inputType="number"
                             android:maxLines="1"
                             android:gravity="start"
                             android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorBlack"
+                            app:backgroundTint="@color/colorBlack"
                             android:layout_marginBottom="8dp"/>
 
                     </LinearLayout>
@@ -190,15 +210,17 @@
                     android:layout_marginBottom="32dp">
 
                     <TextView
+                        android:id="@+id/page_create_job_location"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/colorBlack"
-                        android:text="@string/field_count_of_worker"
+                        android:text="@string/field_address"
                         android:textStyle="bold"
                         android:textSize="16sp"/>
 
                     <Button
+                        android:id="@+id/page_create_job_find_location"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

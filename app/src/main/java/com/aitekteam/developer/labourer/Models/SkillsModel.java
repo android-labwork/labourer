@@ -6,6 +6,9 @@ public class SkillsModel implements Serializable {
     private String title;
     private int level, point, status, type;
 
+    public SkillsModel() {
+    }
+
     public SkillsModel(String title, int level, int point, int status, int type) {
         this.title = title;
         this.level = level;

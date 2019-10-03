@@ -8,6 +8,9 @@ public class WorkerModel implements Serializable {
     private ArrayList skills;
     private long avg_review;
 
+    public WorkerModel() {
+    }
+
     public WorkerModel(String photo, String name, ArrayList skills, long avg_review) {
         this.photo = photo;
         this.name = name;

@@ -7,6 +7,9 @@ public class ReviewModel implements Serializable {
     private long avg_review;
     private int status;
 
+    public ReviewModel() {
+    }
+
     public ReviewModel(String title, String description, long avg_review, int status) {
         this.title = title;
         this.description = description;
