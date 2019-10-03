@@ -5,18 +5,19 @@ import java.util.ArrayList;
 
 public class JobModel implements Serializable {
     private ArrayList<String> photos, benefits, workers;
-    private String title, description, location;
+    private String title, description, location, userId;
     private int duration_of_work, count_of_worker, price, status, type;
     private double location_lat, location_lon;
 
     public JobModel() {}
 
     public JobModel(ArrayList<String> photos, ArrayList<String> benefits, ArrayList<String> workers,
-                    String title, String description, String location, int duration_of_work,
+                    String userId, String title, String description, String location, int duration_of_work,
                     int count_of_worker, int price, int status, int type, double location_lat, double location_lon) {
         this.photos = photos;
         this.benefits = benefits;
         this.workers = workers;
+        this.userId = userId;
         this.title = title;
         this.description = description;
         this.location = location;
@@ -27,6 +28,14 @@ public class JobModel implements Serializable {
         this.type = type;
         this.location_lat = location_lat;
         this.location_lon = location_lon;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public ArrayList<String> getPhotos() {

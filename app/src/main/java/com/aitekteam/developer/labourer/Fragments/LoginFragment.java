@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.aitekteam.developer.labourer.Handlers.CacheHandler;
 import com.aitekteam.developer.labourer.Handlers.FirebaseHandler;
 import com.aitekteam.developer.labourer.Handlers.PagesHandler;
 import com.aitekteam.developer.labourer.MainActivity;
@@ -42,7 +43,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, Fir
     private FirebaseHandler db;
     private final int ALREADY_LOGIN = 0, NOT_ALREADY_LOGIN = 1;
     private final String TYPE_WORKER = "worker", TYPE_EMPLOYER = "employer";
-    private SharedPreferences sharedPref;
+    private CacheHandler cache;
     private FirebaseAuth mAuth;
 
     public static LoginFragment getInstance() {
@@ -59,8 +60,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, Fir
         this.db = new FirebaseHandler(this);
         mAuth = FirebaseAuth.getInstance();
 
-        if (getActivity() != null)
-            this.sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        this.cache = new CacheHandler(getContext());
 
         this.page_login_registration = this.view.findViewById(R.id.page_login_registration);
         this.page_login_save = this.view.findViewById(R.id.page_login_save);
@@ -99,8 +99,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, Fir
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
-            if (getActivity() != null)
-                this.sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+            this.cache = new CacheHandler(getContext());
             this.db = new FirebaseHandler(this);
             this.db.valueEvent(ALREADY_LOGIN);
         }
@@ -151,16 +150,9 @@ public class LoginFragment extends Fragment implements View.OnClickListener, Fir
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        this.db = null;
-        this.sharedPref = null;
-    }
-
-    @Override
     public ValueEventListener getWithValueEvent(DatabaseReference db, int validation) {
         if (validation == ALREADY_LOGIN) {
-            String uid = this.sharedPref.getString(getString(R.string.uid), "");
+            String uid = this.cache.read();
             Log.d("USERID", uid);
             ValueEventListener getDataUser = new ValueEventListener() {
                 @Override
@@ -178,7 +170,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener, Fir
             db.child("users").child(uid).addValueEventListener(getDataUser);
         }
         else {
-            final SharedPreferences.Editor editor = sharedPref.edit();
             final ValueEventListener getDataUser = new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -187,8 +178,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, Fir
                         User currentUser = dataSnapshot.getValue(User.class);
                         if (currentUser != null) {
                             try {
-                                editor.putString(getString(R.string.uid), currentUser.getUserId());
-                                editor.apply();
+                                cache.write(currentUser.getUserId());
                             } catch (Exception e) {
                                 e.printStackTrace();
                             } finally {

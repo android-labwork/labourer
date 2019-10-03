@@ -50,19 +50,19 @@ public class JobFragment extends Fragment {
     }
 
     private void insertDataSet() {
-        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(),
+        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), "",
                 "Cat Dinding Rumah", "Saya punya dinding rumah perlu di cat, please.", "Sukapura",
                 5, 1, 200, 1, 1, 0, 0));
-        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(),
+        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), "",
                 "Renovasi Atap Rumah", "Saya punya atap rumah perlu di renovasi, please.", "Sukapura",
                 5, 1, 200, 2, 2,0, 0));
-        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(),
+        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), "",
                 "Cat Pagar Rumah", "Saya punya pagar rumah perlu di cat, please.", "Sukapura",
                 5, 1, 200, 3, 1,0, 0));
-        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(),
+        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), "",
                 "Cat Atap Rumah", "Saya punya atap rumah perlu di cat, please.", "Sukapura",
                 5, 1, 200, 4, 1,0, 0));
-        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(),
+        this.data_set.add(new JobModel(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), "",
                 "Cat Atap Masjid", "Saya punya atap rumah perlu di cat, please.", "Sukapura",
                 5, 1, 200, 5, 1,0, 0));
     }

@@ -1,15 +1,18 @@
 package com.aitekteam.developer.labourer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.aitekteam.developer.labourer.Fragments.AchievementFragment;
 import com.aitekteam.developer.labourer.Fragments.CreateJobFragment;
 import com.aitekteam.developer.labourer.Fragments.EditProfileFragment;
+import com.aitekteam.developer.labourer.Fragments.JobDetailEmployerFragment;
 import com.aitekteam.developer.labourer.Fragments.JobDetailFragment;
 import com.aitekteam.developer.labourer.Fragments.LevelFragment;
 import com.aitekteam.developer.labourer.Fragments.NotFound404Fragment;
@@ -35,6 +38,15 @@ public class DetailActivity extends AppCompatActivity {
         this.setUpDetail();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void setUpDetail() {
         if (this.getIntent().getExtras() != null) {
             String title = this.getIntent().getStringExtra("title");
@@ -45,6 +57,9 @@ public class DetailActivity extends AppCompatActivity {
             switch (fragment) {
                 case R.string.job_detail_fragment:
                     detail_fragment = JobDetailFragment.getInstance();
+                    break;
+                case R.string.job_employer_detail_fragment:
+                    detail_fragment = JobDetailEmployerFragment.getInstance();
                     break;
                 case R.string.edit_profile_fragment:
                     detail_fragment = EditProfileFragment.getInstance();

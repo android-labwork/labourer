@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.aitekteam.developer.labourer.Handlers.CacheHandler;
 import com.aitekteam.developer.labourer.Handlers.FirebaseHandler;
 import com.aitekteam.developer.labourer.Handlers.PagesHandler;
 import com.aitekteam.developer.labourer.Models.User;
@@ -29,7 +30,7 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
     private EditText page_registration_full_name, page_registration_nik, page_registration_email, page_registration_password;
     private FirebaseHandler db;
     private final int CREATE_USER = 0;
-    private SharedPreferences sharedPref;
+    private CacheHandler cache;
 
     public static RegistrationFragment getInstance() {
         return new RegistrationFragment();
@@ -43,8 +44,7 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
         pagesHandler.showPage(R.id.page_registration);
         this.db = new FirebaseHandler(this);
 
-        if (getActivity() != null)
-        this.sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        this.cache = new CacheHandler(getContext());
 
         this.page_registration_save = this.view.findViewById(R.id.page_registration_save);
         this.page_registration_full_name = this.view.findViewById(R.id.page_registration_full_name);
@@ -85,9 +85,7 @@ public class RegistrationFragment extends Fragment implements View.OnClickListen
                 db.child("users").child(uid).setValue(newUser);
 
             try {
-                SharedPreferences.Editor editor = this.sharedPref.edit();
-                editor.putString(getString(R.string.uid), uid);
-                editor.apply();
+                cache.write(uid);
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {

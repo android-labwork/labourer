@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.aitekteam.developer.labourer.Handlers.CacheHandler;
 import com.aitekteam.developer.labourer.Handlers.FirebaseHandler;
 import com.aitekteam.developer.labourer.Handlers.PagesHandler;
 import com.aitekteam.developer.labourer.Models.JobModel;
@@ -34,7 +35,7 @@ import java.util.Arrays;
 public class CreateJobFragment extends Fragment implements View.OnClickListener, FirebaseHandler.FirebaseHandlerDB {
     private View view;
     private FirebaseHandler db;
-    private SharedPreferences sharedPref;
+    private CacheHandler cache;
     private EditText page_create_job_title,
             page_create_job_description,
             page_create_job_min_price,
@@ -71,10 +72,8 @@ public class CreateJobFragment extends Fragment implements View.OnClickListener,
 
         this.db = new FirebaseHandler(this);
 
-        if (getActivity() != null) {
-            this.sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-            uid = this.sharedPref.getString(getString(R.string.uid), "");
-        }
+        this.cache = new CacheHandler(getContext());
+        uid = this.cache.read();
 
         this.page_create_job_title = this.view.findViewById(R.id.page_create_job_title);
         this.page_create_job_description = this.view.findViewById(R.id.page_create_job_description);
@@ -106,12 +105,14 @@ public class CreateJobFragment extends Fragment implements View.OnClickListener,
         if (validation == CREATE_JOB) {
             ArrayList<String> photos = new ArrayList<>();
             ArrayList<String> benefit = new ArrayList<>();
+            ArrayList<String> workers = new ArrayList<>();
             benefit.addAll(Arrays.asList(page_create_job_benefit.getText().toString().split(",")));
             photos.add("https://firebasestorage.googleapis.com/v0/b/labourer-51d5e.appspot.com/o/slider.png?alt=media&token=b4deaa5f-0620-4de1-8735-25b5699e0974");
             JobModel newJob = new JobModel(
                     photos,
                     benefit,
-                    null,
+                    workers,
+                    uid,
                     page_create_job_title.getText().toString(),
                     page_create_job_description.getText().toString(),
                     page_create_job_find_location.getText().toString(),
@@ -126,6 +127,7 @@ public class CreateJobFragment extends Fragment implements View.OnClickListener,
 
             if (!TextUtils.isEmpty(uid)) {
                 String key = db.child("users").child(uid).child("userJob").push().getKey();
+                db.child("usersJob").child(key).setValue(newJob);
                 db.child("users").child(uid).child("userJob").child(key).setValue(newJob).addOnSuccessListener(getActivity(), new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

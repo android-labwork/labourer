@@ -83,6 +83,7 @@
 
     <!-- FRAGMENT LABEL -->
     <string name="job_detail_fragment">detail_pekerjaan</string>
+    <string name="job_employer_detail_fragment">detail_pekerjaan</string>
     <string name="edit_profile_fragment">pengaturan_profile</string>
     <string name="level_fragment">level</string>
     <string name="achievement_fragment">achievement</string>

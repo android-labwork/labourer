@@ -1,8 +1,6 @@
 package com.aitekteam.developer.labourer.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -15,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.aitekteam.developer.labourer.Handlers.CacheHandler;
 import com.aitekteam.developer.labourer.Handlers.FirebaseHandler;
 import com.aitekteam.developer.labourer.Handlers.PagesHandler;
 import com.aitekteam.developer.labourer.MainActivity;
@@ -38,7 +37,7 @@ public class ChooseAccountTypeFragment extends Fragment implements View.OnClickL
     private FirebaseHandler db;
     private final int UPDATE_USER_AS_WORKER = 0, UPDATE_USER_AS_EMPLOYER = 1;
     private final String TYPE_WORKER = "worker", TYPE_EMPLOYER = "employer";
-    private SharedPreferences sharedPref;
+    private CacheHandler cache;
 
     private FirebaseAuth mAuth;
 
@@ -56,8 +55,7 @@ public class ChooseAccountTypeFragment extends Fragment implements View.OnClickL
         this.db = new FirebaseHandler(this);
         this.mAuth = FirebaseAuth.getInstance();
 
-        if (getActivity() != null)
-        this.sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        this.cache = new CacheHandler(getContext());
 
         this.page_registration_account_type_worker = this.view.findViewById(R.id.page_registration_account_type_worker);
         this.page_registration_account_type_employer = this.view.findViewById(R.id.page_registration_account_type_employer);
@@ -116,7 +114,7 @@ public class ChooseAccountTypeFragment extends Fragment implements View.OnClickL
 
     @Override
     public void create(DatabaseReference db, int validation) {
-        String uid = this.sharedPref.getString(getString(R.string.uid), "");
+        String uid = this.cache.read();
         if (!TextUtils.isEmpty(uid)) {
             if (validation == UPDATE_USER_AS_WORKER) {
                 db.child("users").child(uid).child("userRole").setValue(TYPE_WORKER);
@@ -129,7 +127,7 @@ public class ChooseAccountTypeFragment extends Fragment implements View.OnClickL
 
     @Override
     public ValueEventListener getWithValueEvent(DatabaseReference db, final int validation) {
-        String uid = this.sharedPref.getString(getString(R.string.uid), "");
+        String uid = this.cache.read();
         ValueEventListener getDataUser = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
