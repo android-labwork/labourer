@@ -47,7 +47,27 @@ public class ProfileFragment extends Fragment {
         this.adapter = new ProfilePageContentAdapter(this.data_set, new ProfilePageContentAdapter.PageContentSelectedHandler() {
             @Override
             public void onSelectedItem(PageContentModel item, int position) {
-
+                Intent intent = new Intent(getContext(), DetailActivity.class);
+                intent.putExtra("data_object", data_set.get(position));
+                switch (position) {
+                    case 0:
+                        intent.putExtra("title", getResources().getString(R.string.level_app));
+                        intent.putExtra("fragment", R.string.level_fragment);
+                        break;
+                    case 1:
+                        intent.putExtra("title", getResources().getString(R.string.achievement_app));
+                        intent.putExtra("fragment", R.string.achievement_fragment);
+                        break;
+                    case 2:
+                        intent.putExtra("title", getResources().getString(R.string.skills_app));
+                        intent.putExtra("fragment", R.string.skills_fragment);
+                        break;
+                    default:
+                        intent.putExtra("title", getResources().getString(R.string.review_app));
+                        intent.putExtra("fragment", R.string.review_fragment);
+                        break;
+                }
+                startActivity(intent);
             }
         });
         this.page_profile_content.setAdapter(this.adapter);

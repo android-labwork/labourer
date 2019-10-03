@@ -6,9 +6,18 @@
     <include android:id="@+id/page_splash_screen" layout="@layout/page_splash_screen" />
     <include android:id="@+id/page_login" layout="@layout/page_login" />
     <include android:id="@+id/page_registration" layout="@layout/page_registration" />
+    <include android:id="@+id/page_registration_account_type" layout="@layout/page_registration_choose_account_type" />
 
     <include android:id="@+id/page_profile_worker" layout="@layout/page_profile_worker" />
     <include android:id="@+id/page_edit_profile" layout="@layout/page_edit_profile" />
     <include android:id="@+id/page_job_detail" layout="@layout/page_job_detail" />
+    <include android:id="@+id/page_level" layout="@layout/page_level" />
+    <include android:id="@+id/page_achievement" layout="@layout/page_achievement" />
+    <include android:id="@+id/page_skill" layout="@layout/page_skill" />
+    <include android:id="@+id/page_review" layout="@layout/page_review" />
+
+    <include android:id="@+id/page_job_employer" layout="@layout/page_job_employer" />
+    <include android:id="@+id/page_create_job" layout="@layout/page_create_job" />
+    <include android:id="@+id/page_profile_employer" layout="@layout/page_profile_employer" />
 
 </LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "245225504713",
+    "firebase_url": "https://labourer-51d5e.firebaseio.com",
+    "project_id": "labourer-51d5e",
+    "storage_bucket": "labourer-51d5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245225504713:android:3e995510a34f394d9e3218",
+        "android_client_info": {
+          "package_name": "com.aitekteam.developer.labourer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245225504713-9oh6d99ds1ebut2tq1fao7n4vohk0798.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aitekteam.developer.labourer",
+            "certificate_hash": "fc065a3e3cf9a90d1e3d1d69d418e3da0f0d6162"
+          }
+        },
+        {
+          "client_id": "245225504713-aeuhdrovp1l8ede1fkscfrdcjp65nkf1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB_PKogPWOr3XcUtl587dJfZWwlOjqbkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245225504713-aeuhdrovp1l8ede1fkscfrdcjp65nkf1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

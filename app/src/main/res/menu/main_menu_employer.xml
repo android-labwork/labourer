@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_job_employer"
+        android:title="@string/label_job"
+        android:icon="@drawable/ic_job_48_full" />
+
+    <item android:id="@+id/action_find_job_employer"
+        android:title="@string/label_find_worker"
+        android:icon="@drawable/ic_job_seeker_48_full" />
+
+    <item android:id="@+id/action_notification_employer"
+        android:title="@string/label_notification"
+        android:icon="@drawable/ic_notification_48_full" />
+
+    <item android:id="@+id/action_profile_employer"
+        android:title="@string/label_profile"
+        android:icon="@drawable/ic_account_48_full" />
+
+</menu>

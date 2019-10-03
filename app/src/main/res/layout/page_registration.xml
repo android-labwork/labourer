@@ -176,6 +176,7 @@
                 android:layout_marginRight="32dp" />
 
             <Button
+                android:id="@+id/page_registration_save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorAccent"

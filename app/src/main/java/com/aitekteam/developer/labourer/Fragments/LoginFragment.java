@@ -50,6 +50,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         }
         else {
             // Do Login
+
         }
     }
 }

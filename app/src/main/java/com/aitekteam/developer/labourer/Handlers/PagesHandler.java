@@ -25,10 +25,19 @@ public class PagesHandler {
         this.items.add(R.id.page_splash_screen);
         this.items.add(R.id.page_login);
         this.items.add(R.id.page_registration);
+        this.items.add(R.id.page_registration_account_type);
 
         this.items.add(R.id.page_profile_worker);
         this.items.add(R.id.page_edit_profile);
         this.items.add(R.id.page_job_detail);
+        this.items.add(R.id.page_level);
+        this.items.add(R.id.page_achievement);
+        this.items.add(R.id.page_skill);
+        this.items.add(R.id.page_review);
+
+        this.items.add(R.id.page_job_employer);
+        this.items.add(R.id.page_create_job);
+        this.items.add(R.id.page_profile_employer);
     }
 
     private void setPages() {

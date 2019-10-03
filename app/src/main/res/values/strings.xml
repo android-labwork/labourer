@@ -7,9 +7,12 @@
     <string name="label_notification">Notif</string>
     <string name="label_profile">Akun</string>
     <string name="label_find_worker">Cari Pekerja</string>
+    <string name="label_account_type_worker">Bekerja</string>
+    <string name="label_account_type_employer">Cari Pekerja</string>
 
     <!-- LABEL STRING -->
     <string name="label_last_exp">Exp Terakhir didapatkan</string>
+    <string name="label_last_achievement">Pencapaian Terakhir didapatkan</string>
     <string name="label_want_to_be">Saya Ingin</string>
     <string name="label_want_to_job">Bekerja</string>
     <string name="label_want_to_find_job">Mencari Pekerja</string>
@@ -17,6 +20,8 @@
     <string name="label_already_have_account">Sudah punya akun?</string>
     <string name="label_register_now">Daftar sekarang!</string>
     <string name="label_login_now">Login sekarang!</string>
+    <string name="label_skill_paint">Mengecat</string>
+    <string name="label_skill_decoration">Dekorasi</string>
 
     <!-- DESCRIPTION STRING -->
     <string name="desc_registration">Daftarkan diri anda dan menjadi bagian \ndari Labourer</string>
@@ -60,12 +65,23 @@
     <string name="change_face_button">Ganti Foto</string>
     <string name="login_button">Masuk</string>
     <string name="registration_button">Daftar</string>
+    <string name="recruit_button">Rekrut</string>
 
     <!-- APPBAR STRING -->
     <string name="job_detail_app">Detail Pekerjaan</string>
     <string name="edit_profile_app">Pengaturan Profil</string>
+    <string name="level_app">Level</string>
+    <string name="achievement_app">Pencapaian</string>
+    <string name="skills_app">Keahlian</string>
+    <string name="review_app">Ulasan</string>
+    <string name="create_job_app">Buat Pekerjaan</string>
 
     <!-- FRAGMENT LABEL -->
     <string name="job_detail_fragment">detail_pekerjaan</string>
     <string name="edit_profile_fragment">pengaturan_profile</string>
+    <string name="level_fragment">level</string>
+    <string name="achievement_fragment">achievement</string>
+    <string name="skills_fragment">keahlian</string>
+    <string name="review_fragment">ulasan</string>
+    <string name="create_job_fragment">buat_pekerjaan</string>
 </resources>
